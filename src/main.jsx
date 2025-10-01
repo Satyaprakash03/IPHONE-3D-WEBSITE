@@ -16,13 +16,8 @@ Sentry.init({
     }),
     Sentry.replayIntegration({
       maskAllText: false,
-      blockAllMedia: false,
     }),
   ],
-  tracesSampleRate: 1.0, 
-  tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
-  replaysSessionSampleRate: 0.1,
-  replaysOnErrorSampleRate: 1.0, 
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
